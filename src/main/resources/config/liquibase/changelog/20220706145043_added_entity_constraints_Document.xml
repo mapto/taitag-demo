@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Document.
+    -->
+    <changeSet id="20220706145043-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="written_id"
+                                 baseTableName="document"
+                                 constraintName="fk_document__written_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="person"/>
+
+        <addForeignKeyConstraint baseColumnNames="arrived_id"
+                                 baseTableName="document"
+                                 constraintName="fk_document__arrived_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="place"/>
+
+        <addForeignKeyConstraint baseColumnNames="originated_id"
+                                 baseTableName="document"
+                                 constraintName="fk_document__originated_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="place"/>
+
+        <addForeignKeyConstraint baseColumnNames="document_id"
+                                 baseTableName="rel_document__received"
+                                 constraintName="fk_rel_document__received__document_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="document"/>
+
+        <addForeignKeyConstraint baseColumnNames="received_id"
+                                 baseTableName="rel_document__received"
+                                 constraintName="fk_rel_document__received__received_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="person"/>
+
+        <addForeignKeyConstraint baseColumnNames="document_id"
+                                 baseTableName="rel_document__quoted_in"
+                                 constraintName="fk_rel_document__quoted_in__document_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="document"/>
+
+        <addForeignKeyConstraint baseColumnNames="quoted_in_id"
+                                 baseTableName="rel_document__quoted_in"
+                                 constraintName="fk_rel_document__quoted_in__quoted_in_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="person"/>
+    </changeSet>
+</databaseChangeLog>

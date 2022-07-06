@@ -1,0 +1,101 @@
+{
+  "applications": "*",
+  "changelogDate": "20220706145043",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "document",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "georgianDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "DocumentType",
+      "fieldValues": "ResearchNotes,Letter,Image"
+    },
+    {
+      "fieldName": "incipit",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "transcription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "collection",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "archive",
+      "fieldType": "Archive",
+      "fieldValues": "BNF,BNCF,UBL,Other"
+    },
+    {
+      "fieldName": "folder",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "folderN",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shelfMark",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "publication",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "field",
+      "fieldType": "Field",
+      "fieldValues": "Pneumatics,Travel,Astronomy,Optics"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Document",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "author",
+      "relationshipName": "written",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "place",
+      "otherEntityRelationshipName": "placeIn",
+      "relationshipName": "arrived",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "place",
+      "otherEntityRelationshipName": "placeOut",
+      "relationshipName": "originated",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "recipient",
+      "ownerSide": true,
+      "relationshipName": "received",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "quoted",
+      "ownerSide": true,
+      "relationshipName": "quotedIn",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

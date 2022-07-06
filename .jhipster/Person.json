@@ -1,0 +1,61 @@
+{
+  "applications": "*",
+  "changelogDate": "20220706145044",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "person",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "latinName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "aka",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "birth",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "death",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "affiliation",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Person",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "document",
+      "otherEntityRelationshipName": "written",
+      "relationshipName": "author",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "document",
+      "otherEntityRelationshipName": "received",
+      "ownerSide": false,
+      "relationshipName": "recipient",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "document",
+      "otherEntityRelationshipName": "quotedIn",
+      "ownerSide": false,
+      "relationshipName": "quoted",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

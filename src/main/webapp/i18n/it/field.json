@@ -1,0 +1,11 @@
+{
+  "taitagDemoApp": {
+    "Field": {
+      "null": "",
+      "Pneumatics": "Pneumatics",
+      "Travel": "Travel",
+      "Astronomy": "Astronomy",
+      "Optics": "Optics"
+    }
+  }
+}

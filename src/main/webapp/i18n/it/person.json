@@ -1,0 +1,33 @@
+{
+  "taitagDemoApp": {
+    "person": {
+      "home": {
+        "title": "People",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Person",
+        "createOrEditLabel": "Genera o modifica un Person",
+        "search": "Cerca Person",
+        "notFound": "No People found"
+      },
+      "created": "&Egrave; stato generato un nuovo Person con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Person identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Person con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Person {{ id }}?"
+      },
+      "detail": {
+        "title": "Person"
+      },
+      "id": "ID",
+      "name": "Name",
+      "latinName": "Latin Name",
+      "aka": "Aka",
+      "birth": "Birth",
+      "death": "Death",
+      "affiliation": "Affiliation",
+      "author": "Author",
+      "recipient": "Recipient",
+      "quoted": "Quoted"
+    }
+  }
+}

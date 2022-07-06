@@ -1,0 +1,28 @@
+{
+  "taitagDemoApp": {
+    "place": {
+      "home": {
+        "title": "Places",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Place",
+        "createOrEditLabel": "Genera o modifica un Place",
+        "search": "Cerca Place",
+        "notFound": "No Places found"
+      },
+      "created": "&Egrave; stato generato un nuovo Place con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Place identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Place con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Place {{ id }}?"
+      },
+      "detail": {
+        "title": "Place"
+      },
+      "id": "ID",
+      "city": "City",
+      "italianName": "Italian Name",
+      "placeIn": "Place In",
+      "placeOut": "Place Out"
+    }
+  }
+}

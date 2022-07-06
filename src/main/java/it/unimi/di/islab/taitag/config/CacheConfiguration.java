@@ -48,6 +48,16 @@ public class CacheConfiguration {
             createCache(cm, it.unimi.di.islab.taitag.domain.User.class.getName());
             createCache(cm, it.unimi.di.islab.taitag.domain.Authority.class.getName());
             createCache(cm, it.unimi.di.islab.taitag.domain.User.class.getName() + ".authorities");
+            createCache(cm, it.unimi.di.islab.taitag.domain.Document.class.getName());
+            createCache(cm, it.unimi.di.islab.taitag.domain.Document.class.getName() + ".receiveds");
+            createCache(cm, it.unimi.di.islab.taitag.domain.Document.class.getName() + ".quotedIns");
+            createCache(cm, it.unimi.di.islab.taitag.domain.Person.class.getName());
+            createCache(cm, it.unimi.di.islab.taitag.domain.Person.class.getName() + ".authors");
+            createCache(cm, it.unimi.di.islab.taitag.domain.Person.class.getName() + ".recipients");
+            createCache(cm, it.unimi.di.islab.taitag.domain.Person.class.getName() + ".quoteds");
+            createCache(cm, it.unimi.di.islab.taitag.domain.Place.class.getName());
+            createCache(cm, it.unimi.di.islab.taitag.domain.Place.class.getName() + ".placeIns");
+            createCache(cm, it.unimi.di.islab.taitag.domain.Place.class.getName() + ".placeOuts");
             // jhipster-needle-ehcache-add-entry
         };
     }

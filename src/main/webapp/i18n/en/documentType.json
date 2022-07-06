@@ -1,0 +1,10 @@
+{
+  "taitagDemoApp": {
+    "DocumentType": {
+      "null": "",
+      "ResearchNotes": "ResearchNotes",
+      "Letter": "Letter",
+      "Image": "Image"
+    }
+  }
+}

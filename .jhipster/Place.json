@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20220706145045",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "place",
+  "fields": [
+    {
+      "fieldName": "city",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "italianName",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Place",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "document",
+      "otherEntityRelationshipName": "arrived",
+      "relationshipName": "placeIn",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "document",
+      "otherEntityRelationshipName": "originated",
+      "relationshipName": "placeOut",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}
