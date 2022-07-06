@@ -1,0 +1,40 @@
+{
+  "taitagDemoApp": {
+    "document": {
+      "home": {
+        "title": "Documents",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Document",
+        "createOrEditLabel": "Genera o modifica un Document",
+        "search": "Cerca Document",
+        "notFound": "No Documents found"
+      },
+      "created": "&Egrave; stato generato un nuovo Document con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Document identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Document con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Document {{ id }}?"
+      },
+      "detail": {
+        "title": "Document"
+      },
+      "id": "Id",
+      "georgianDate": "Georgian Date",
+      "type": "Type",
+      "incipit": "Incipit",
+      "transcription": "Transcription",
+      "collection": "Collection",
+      "archive": "Archive",
+      "folder": "Folder",
+      "folderN": "Folder N",
+      "shelfMark": "Shelf Mark",
+      "publication": "Publication",
+      "field": "Field",
+      "written": "Written",
+      "arrived": "Arrived",
+      "originated": "Originated",
+      "received": "Received",
+      "quotedIn": "Quoted In"
+    }
+  }
+}

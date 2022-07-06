@@ -1,0 +1,11 @@
+{
+  "taitagDemoApp": {
+    "Archive": {
+      "null": "",
+      "BNF": "BNF",
+      "BNCF": "BNCF",
+      "UBL": "UBL",
+      "Other": "Other"
+    }
+  }
+}

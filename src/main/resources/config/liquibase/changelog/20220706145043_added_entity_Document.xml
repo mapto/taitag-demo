@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Document.
+    -->
+    <changeSet id="20220706145043-1" author="jhipster">
+        <createTable tableName="document">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="georgian_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="incipit" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="transcription" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="collection" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="archive" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="folder" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="folder_n" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="shelf_mark" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="publication" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="field" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="written_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="arrived_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="originated_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20220706145043-1-relations" author="jhipster">
+
+        <createTable tableName="rel_document__received">
+            <column name="received_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="document_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="document_id, received_id" tableName="rel_document__received"/>
+
+        <createTable tableName="rel_document__quoted_in">
+            <column name="quoted_in_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="document_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="document_id, quoted_in_id" tableName="rel_document__quoted_in"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220706145043-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/document.csv"
+                  separator=";"
+                  tableName="document"
+                  usePreparedStatements="true">
+            <column name="id" type="string"/>
+            <column name="georgian_date" type="date"/>
+            <column name="type" type="string"/>
+            <column name="incipit" type="string"/>
+            <column name="transcription" type="string"/>
+            <column name="collection" type="string"/>
+            <column name="archive" type="string"/>
+            <column name="folder" type="string"/>
+            <column name="folder_n" type="string"/>
+            <column name="shelf_mark" type="string"/>
+            <column name="publication" type="string"/>
+            <column name="field" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
